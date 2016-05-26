@@ -1,3 +1,20 @@
 <template name="AddUser">
-			{{> quickForm collection="Players" id="insertRecipeForm" type="insert" class="new-recipe-form"}}
+	{{#autoForm collection="Players" id="insertRecipeForm" type="insert" class="new-recipe-form"}}
+
+	    <fieldset>
+	      <legend>Add a Book</legend>
+		      {{> afQuickField name='firstName'}}
+		      {{> afQuickField name='lastName'}}
+		      {{> afFormGroup  name='department' type="select" options=options label='Choose Department'}}
+		      {{> afQuickField name='points'}}
+
+	    </fieldset>
+	    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+
+	{{#each playersList}}
+	<p>{{firstName}}</p>
+	{{/each}}
+
+	{{options}}
 </template>

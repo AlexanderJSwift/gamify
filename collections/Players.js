@@ -1,4 +1,10 @@
-Players= new Mongo.Collection('players');
+Players = new Mongo.Collection('players');
+
+Players.allow({
+	insert:function(){
+		return true;
+	}
+})
 
 Point = new SimpleSchema({
 	pointType:{
@@ -21,8 +27,16 @@ PlayerSchema = new SimpleSchema({
 		type:String,
 		label:"Last Name"
 	},
+	departmentId:{
+		type: Number,
+		autoform: {
+			type:"hidden"
+		},
+		optional: true
+	},
 	points:{
 		type:[Point]
+
 	}
 });
 
