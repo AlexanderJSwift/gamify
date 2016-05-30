@@ -28,7 +28,7 @@ PlayerSchema = new SimpleSchema({
 		label:"Last Name"
 	},
 	departmentId:{
-		type: Number,
+		type: String,
 		autoform: {
 			type:"hidden"
 		},

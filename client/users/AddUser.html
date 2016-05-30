@@ -5,9 +5,9 @@
 	      <legend>Add a Book</legend>
 		      {{> afQuickField name='firstName'}}
 		      {{> afQuickField name='lastName'}}
-		      {{> afFormGroup  name='department' type="select" options=options label='Choose Department'}}
+		      {{> afFormGroup  name='department' type="select" options=options label='Choose Department' id='department'}}
 		      {{> afQuickField name='points'}}
-
+			  {{> afQuickField name='departmentId' id='departmentId'}}	
 	    </fieldset>
 	    <button type="submit" class="btn btn-primary">Insert</button>
   {{/autoForm}}
