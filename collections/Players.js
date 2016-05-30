@@ -6,17 +6,7 @@ Players.allow({
 	}
 })
 
-Point = new SimpleSchema({
-	pointTypeId:{
-		type:String,
-		label: "Point Type"
-	},
-	pointValue:{
-		type:Number,
-		label: "Point Value"
-	}
 
-})
 
 Badge = new SimpleSchema({
 	badgeType:{
@@ -52,9 +42,6 @@ PlayerSchema = new SimpleSchema({
 			type:"hidden"
 		},
 		optional: true
-	},
-	points:{
-		type:[Point]
 	},
 	badges:{
 		type:[Badge]
