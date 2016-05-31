@@ -4,7 +4,7 @@ Meteor.subscribe('players', function() {
 
 Meteor.subscribe('departments');
 
-Template.AddUser.helpers({
+Template.AddPlayer.helpers({
 
 	playersList: () => {
 		return Players.find();
@@ -23,10 +23,17 @@ Template.AddUser.helpers({
 	}
 })
 
-Template.AddUser.events({
+Template.AddPlayer.events({
 	'change #department': function(event,template){
 		var departmentId = $(event.currentTarget).val();
 		console.log("Department Id: "+departmentId);
 		$('#departmentId').val(departmentId);
+	}
+})
+
+//TODO: Refactor into other file
+Template.Players.helpers({
+	playersList:()=> {
+		return Players.find();
 	}
 })

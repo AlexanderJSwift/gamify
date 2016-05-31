@@ -1,6 +1,8 @@
-Meteor.subscribe('departments');
+Template.EditDepartments.onCreated(function () {
+	 this.autorun(()=>this.subscribe('departments'));
+})
 
-Template.AddDepartment.helpers({
+Template.EditDepartments.helpers({
 	departments:()=>{
 		return Departments.find({}); 
 	}

@@ -7,7 +7,7 @@ Players.allow({
 })
 
 Point = new SimpleSchema({
-	pointType:{
+	pointTypeId:{
 		type:String,
 		label: "Point Type"
 	},

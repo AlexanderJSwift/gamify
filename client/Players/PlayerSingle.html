@@ -1,0 +1,6 @@
+<template name="PlayerSingle">
+	<h3>{{player.firstName}} {{player.lastName}}</h3>
+	{{#each player.points}}
+		{{pointTypeId}} - {{pointValue}}
+	{{/each}}	
+</template>

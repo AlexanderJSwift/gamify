@@ -5,3 +5,7 @@ Meteor.publish('departments', function(){
 Meteor.publish('players', function(){
 	return Players.find();
 })
+
+Meteor.publish('points',function(){
+	return PointTypes.find();
+})
